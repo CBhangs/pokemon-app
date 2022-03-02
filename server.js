@@ -1,17 +1,30 @@
 const express = require('express'); // lets you run express
 const app = express(); // calls express to work 
-const pokemon = require('./models/pokemon');
+const pokemon = require('./models/pokemon'); // imports pokemon array
 
-app.get('/greeting', (req, res) => {
+
+const port = 3000 
+
+//  set up views
+app.set('view engine', 'jsx');
+app.engine('jsx', require('express-react-views').createEngine());
+
+
+app.get('/', (req, res) => {
     res.send('<h1>Welcome to the Pokemon App!</h1>');
 });
 
+// index
 app.get('/pokemon', (req, res) => {
-    res.send(pokemon)
+    res.render('Index', {
+        pokemon: pokemon
+    })
 });
 
 
 
-app.listen(3000, () => {
+
+
+app.listen(port, () => {
     console.log('Hello Trainers')
 })
