@@ -1,5 +1,5 @@
-const pokemon = [
-    {name: "bulbasaur", img: "http://img.pokemondb.net/artwork/bulbasaur"},
+const pokemons = [
+    {name: "bulbasaur", img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"},
     {name: "ivysaur", img: "http://img.pokemondb.net/artwork/ivysaur"},
     {name: "venusaur", img: "http://img.pokemondb.net/artwork/venusaur"},
     {name: "charmander", img: "http://img.pokemondb.net/artwork/charmander"},
@@ -9,4 +9,4 @@ const pokemon = [
  ];
 
 
- module.exports = pokemon
+ module.exports = pokemons

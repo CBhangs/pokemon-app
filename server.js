@@ -1,6 +1,6 @@
 const express = require('express'); // lets you run express
 const app = express(); // calls express to work 
-const pokemon = require('./models/pokemon'); // imports pokemon array
+const pokemons = require('./models/pokemon'); // imports pokemon array
 
 
 const port = 3000 
@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 // index
 app.get('/pokemon', (req, res) => {
     res.render('Index', {
-        pokemon: pokemon
+        pokemons: pokemons
     })
 });
 
